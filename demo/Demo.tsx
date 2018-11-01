@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import {
   Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle,
-  Select, Textarea, Radio, Checkbox, InlineInput, Button,
+  Select, Textarea, Radio, Checkbox, InlineInput,
   Span, H1, H2, H3, H4, H5, H6, ColorBox, List, ListItem, theme,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
