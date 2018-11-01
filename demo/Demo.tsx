@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
+import styled from 'styled-components';
+import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import {
   Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle,
-  Select, Textarea, Radio, Checkbox, InlineInput,
+  Select, Textarea, Radio, Checkbox, InlineInput, Button,
   Span, H1, H2, H3, H4, H5, H6, ColorBox, List, ListItem, theme,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
-class App extends Component {
+const Circle = styled.span`
+  display: inline-block;
+  margin: 0 15px;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 100%;
+`;
+
+class App extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
@@ -48,6 +58,16 @@ class App extends Component {
             <Button btnType="default" btnSize="small">Small</Button>
             <Button btnType="primary" btnSize="default">Default</Button>
             <Button btnType="secondary" btnSize="large">Large</Button>
+          </div>
+          <div className="mb4">
+            <Button left={<Circle />}>
+              Icon Button
+            </Button>
+          </div>
+          <div className="mb4">
+            <Button right={<Circle />}>
+              Icon Button
+            </Button>
           </div>
           <div className="mb4">
             <PlainButton>Plain Button</PlainButton>

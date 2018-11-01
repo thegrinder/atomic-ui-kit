@@ -1,4 +1,4 @@
-import { HTMLProps } from 'react';
+import { HTMLProps, ReactNode } from 'react';
 import styled from 'styled-components';
 import {
   btnNormalStyle,
@@ -11,11 +11,15 @@ export type IBtnType = 'default' | 'primary' | 'secondary' | 'danger';
 export type IBtnSize = 'small' | 'default' | 'large';
 
 export interface IButtonProps {
-  btnType?: IBtnType;
-  btnSize?: IBtnSize;
+  btnType: IBtnType;
+  btnSize: IBtnSize;
+  left: ReactNode;
+  right: ReactNode;
 }
 
-const Button = styled.button<IButtonProps & HTMLProps<HTMLButtonElement>>`
+const StyledButton = styled.button<IButtonProps & HTMLProps<HTMLButtonElement>>`
+  ${btnSizeStyle}
+  ${btnNormalStyle}
   margin: 0;
   border: none;
   overflow: visible;
@@ -32,8 +36,8 @@ const Button = styled.button<IButtonProps & HTMLProps<HTMLButtonElement>>`
   border-width: 1px;
   border-style: solid;
   letter-spacing: 1px;
-  ${btnSizeStyle}
-  ${btnNormalStyle}
+  ${({ left }) => left ? 'padding-left: 0;' : ''}
+  ${({ right }) => right ? 'padding-right: 0;' : ''}
   &:hover,
   &:focus {
     ${btnHoverStyle}
@@ -48,11 +52,4 @@ const Button = styled.button<IButtonProps & HTMLProps<HTMLButtonElement>>`
   }
 `;
 
-const defaultProps: Partial<IButtonProps> = {
-  btnType: 'default',
-  btnSize: 'default',
-};
-
-Button.defaultProps = defaultProps;
-
-export default Button;
+export default StyledButton;
