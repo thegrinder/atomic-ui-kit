@@ -1,6 +1,7 @@
 import { HTMLProps } from 'react';
 import styled from 'styled-components';
 import { commonInputStyles } from '../commonFormStyles';
+import { inputDisabledStyle } from '../formHelpers';
 import { rem } from '../../../helpers/utils';
 
 export interface ISelectProps {
@@ -14,11 +15,9 @@ const Select = styled.select<ISelectProps & HTMLProps<HTMLSelectElement>>`
   vertical-align: middle;
   display: inline-block;
   height: ${rem(40)};
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
+  background-color: #fff;
   &:disabled {
-    background-color: #000;
+    ${inputDisabledStyle}
   }
 `;
 

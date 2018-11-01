@@ -103,7 +103,7 @@ class App extends Component {
             <Radio />
           </div>
           <div className="w-50 mb4">
-            <Checkbox />
+            <Checkbox id="bla"/>
             <Checkbox />
           </div>
           <div>

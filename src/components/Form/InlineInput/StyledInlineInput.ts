@@ -10,6 +10,7 @@ import { rem } from '../../../helpers/utils';
 
 export interface IStyledInlineInputProps {
   invalid?: boolean;
+  submitting?: boolean;
 }
 
 const StyledInlineInput = styled.input<IStyledInlineInputProps & HTMLProps<HTMLInputElement>>`
@@ -29,6 +30,7 @@ const StyledInlineInput = styled.input<IStyledInlineInputProps & HTMLProps<HTMLI
   display: inline-block;
   height: ${rem(40)};
   padding: 0 ${rem(10)};
+  ${({ submitting }) => submitting ? `padding-right : ${rem(36)};` : ''}
   ${inlineInputNormalStyle}
   &:hover {
     ${inlineInputHoverStyle}
@@ -44,6 +46,7 @@ const StyledInlineInput = styled.input<IStyledInlineInputProps & HTMLProps<HTMLI
 
 const defaultProps: Partial<IStyledInlineInputProps> = {
   invalid: false,
+  submitting: false,
 };
 
 StyledInlineInput.defaultProps = defaultProps;

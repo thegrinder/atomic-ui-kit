@@ -25,7 +25,11 @@ const SpinnerWrapper = styled.div`
 
 const InlineInput: SFC<IInlineInputProps & HTMLProps<HTMLInputElement>> = ({ submitting, disabled, ref, ...rest }) => (
   <Wrapper>
-    <StyledInlineInput disabled={submitting || disabled} {...rest} />
+    <StyledInlineInput
+      submitting={submitting}
+      disabled={submitting || disabled}
+      {...rest}
+    />
     {submitting && <SpinnerWrapper><Spinner color="#ccc"/></SpinnerWrapper>}
   </Wrapper>
 );
