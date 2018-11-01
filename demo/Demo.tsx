@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
-
+import { FaAmazonPay } from 'react-icons/fa';
 import {
   Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle,
   Select, Textarea, Radio, Checkbox, InlineInput,
@@ -9,14 +9,13 @@ import {
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
-const Circle = styled.span`
+const IconWrapper = styled.span`
+  vertical-align: middle;
+  line-height: 0;
   display: inline-block;
   margin: 0 15px;
-  width: 10px;
-  height: 10px;
-  background: #000;
-  border-radius: 100%;
 `;
+
 
 class App extends React.Component {
   render() {
@@ -60,12 +59,12 @@ class App extends React.Component {
             <Button btnType="secondary" btnSize="large">Large</Button>
           </div>
           <div className="mb4">
-            <Button left={<Circle />}>
+            <Button left={<IconWrapper><FaAmazonPay size={24} /></IconWrapper>}>
               Icon Button
             </Button>
           </div>
           <div className="mb4">
-            <Button right={<Circle />}>
+            <Button btnType="primary" right={<IconWrapper><FaAmazonPay size={24} /></IconWrapper>}>
               Icon Button
             </Button>
           </div>

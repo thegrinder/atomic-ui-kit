@@ -18,8 +18,6 @@ export interface IButtonProps {
 }
 
 const StyledButton = styled.button<IButtonProps & HTMLProps<HTMLButtonElement>>`
-  ${btnSizeStyle}
-  ${btnNormalStyle}
   margin: 0;
   border: none;
   overflow: visible;
@@ -36,6 +34,8 @@ const StyledButton = styled.button<IButtonProps & HTMLProps<HTMLButtonElement>>`
   border-width: 1px;
   border-style: solid;
   letter-spacing: 1px;
+  ${btnSizeStyle}
+  ${btnNormalStyle}
   ${({ left }) => left ? 'padding-left: 0;' : ''}
   ${({ right }) => right ? 'padding-right: 0;' : ''}
   &:hover,
