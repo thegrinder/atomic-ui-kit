@@ -1,4 +1,4 @@
-import React, { SFC, HTMLProps } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import StyledInlineInput from './StyledInlineInput';
 import Spinner from '../../Spinner/Spinner';
@@ -23,7 +23,9 @@ const SpinnerWrapper = styled.div`
   align-items: center;
 `;
 
-const InlineInput: SFC<IInlineInputProps & HTMLProps<HTMLInputElement>> = ({ submitting, disabled, ref, ...rest }) => (
+const InlineInput: React.SFC<IInlineInputProps & React.HTMLProps<HTMLInputElement>> = (
+  { submitting, disabled, ref, ...rest }
+) => (
   <Wrapper>
     <StyledInlineInput
       submitting={submitting}

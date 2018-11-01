@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import * as React from 'react';
 import ToggleLabel from './ToggleLabel';
 import ToggleCheckbox from './ToggleCheckbox';
 import ToggleSlider from './ToggleSlider';
@@ -9,7 +9,7 @@ export interface IToggleProps {
   onChange: (e: any) => void;
 }
 
-const Toggle: SFC<IToggleProps> = ({ h, disabled, onChange, ...rest }) => (
+const Toggle: React.SFC<IToggleProps> = ({ h, disabled, onChange, ...rest }) => (
   <ToggleLabel>
     <ToggleCheckbox
       h={h}
