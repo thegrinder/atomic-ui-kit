@@ -2,9 +2,25 @@ import { HTMLProps } from 'react';
 import styled from 'styled-components';
 import { textSizingStyle, textColorStyle } from '../textHelpers';
 
+export type IParagraphColour =
+  | 'white'
+  | 'lightest'
+  | 'light'
+  | 'normal'
+  | 'dark'
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'danger';
+
+export type IParagraphSizing =
+  | 'small'
+  | 'medium'
+  | 'large';
+
 export interface IParagraphProps {
-  colour?: string;
-  sizing?: string;
+  colour?: IParagraphColour;
+  sizing?: IParagraphSizing;
 }
 
 const Paragraph = styled.p<IParagraphProps & HTMLProps<HTMLParagraphElement>>`

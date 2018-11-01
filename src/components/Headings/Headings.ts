@@ -2,9 +2,28 @@ import { HTMLProps } from 'react';
 import styled from 'styled-components';
 import { headingSizingStyle, headingColorStyle } from './headingHelpers';
 
+export type IHeadingSizing =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6';
+
+export type IHeadingColour =
+  | 'white'
+  | 'lightest'
+  | 'light'
+  | 'normal'
+  | 'dark'
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'danger';
+
 export interface IHeadingProps {
-  sizing?: string;
-  colour?: string;
+  sizing?: IHeadingSizing;
+  colour?: IHeadingColour;
 }
 
 export const H1 = styled.h1<IHeadingProps & HTMLProps<HTMLHeadingElement>>`
