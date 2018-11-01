@@ -11,8 +11,8 @@
       "allowJs": true,
       "lib": ["dom", "es7"],
       "keyofStringsOnly": true
-   },
+    },
    "include": [
-      "./app/**/*"
+      "./src/**/*"
    ]
 }
