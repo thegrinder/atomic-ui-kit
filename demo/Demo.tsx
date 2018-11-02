@@ -6,6 +6,7 @@ import {
   Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle,
   Select, Textarea, Radio, Checkbox, InlineInput,
   Span, H1, H2, H3, H4, H5, H6, ColorBox, List, ListItem, theme,
+  getBoxBgColor,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
@@ -14,6 +15,15 @@ const IconWrapper = styled.span`
   line-height: 0;
   display: inline-block;
   margin: 0 15px;
+`;
+  
+const Circle = styled.span`
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 0 15px;
+  background-color: ${({ theme }) => getBoxBgColor(theme, 'primary')};
 `;
 
 
@@ -59,7 +69,7 @@ class App extends React.Component {
             <Button btnType="secondary" btnSize="large">Large</Button>
           </div>
           <div className="mb4">
-            <Button left={<IconWrapper><FaAmazonPay size={24} /></IconWrapper>}>
+            <Button left={<Circle />}>
               Icon Button
             </Button>
           </div>
