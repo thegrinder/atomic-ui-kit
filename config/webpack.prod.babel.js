@@ -1,6 +1,6 @@
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import autoprefixer from 'autoprefixer';
-import PATHS from './paths';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const PATHS = require('./paths');
 
 const extractSass = new ExtractTextPlugin({
   filename: 'basic-styled-uikit.css',
@@ -20,18 +20,17 @@ const prodConfig = {
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   module: {
     rules: [
       {
-        test: /\.(js)$/,
-        use: 'babel-loader',
-        exclude: [
-          PATHS.demo,
-          /node_modules/,
-        ],
+        test: /\.(t|j)sx?$/,
+        loader: 'awesome-typescript-loader',
+        exclude: [/node_modules/],
       },
-      { test: /\.inline.svg$/, use: 'svg-react-loader' },
-      { test: /^(?!.*\.inline\.svg$).*\.svg$/, use: 'url-loader' },
       {
         test: /\.s?css$/,
         use: extractSass.extract({
@@ -61,4 +60,4 @@ const prodConfig = {
   ],
 };
 
-export default prodConfig;
+module.exports = prodConfig;

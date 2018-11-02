@@ -17,7 +17,8 @@
     "start": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.babel.js",
     "production": "NODE_ENV=production webpack -p --config config/webpack.prod.babel.js",
     "lint": "eslint src/. demo/. config/.; exit 0",
-    "fix": "eslint --fix src/. demo/. config/.; exit 0"
+    "fix": "eslint --fix src/. demo/. config/.; exit 0",
+    "build": "tsc"
   },
   "author": "Pawel Szczepkowski",
   "license": "MIT",
