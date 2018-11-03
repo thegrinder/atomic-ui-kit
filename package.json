@@ -1,5 +1,5 @@
 {
-  "name": "styled-uikit",
+  "name": "atomic-ui-kit",
   "version": "0.0.1",
   "description": "A set of basic UI components built with styled-components",
   "keywords": [
@@ -7,10 +7,10 @@
     "styled-components",
     "typescript"
   ],
-  "homepage": "https://github.com/thegrinder/styled-uikit",
+  "homepage": "https://github.com/thegrinder/atomic-ui-kit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thegrinder/styled-uikit.git"
+    "url": "https://github.com/thegrinder/atomic-ui-kit.git"
   },
   "main": "lib",
   "typings": "lib",
