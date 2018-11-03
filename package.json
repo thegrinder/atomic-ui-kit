@@ -15,10 +15,9 @@
   "main": "lib",
   "typings": "lib",
   "scripts": {
-    "lint": "eslint src/. demo/. config/.; exit 0",
-    "fix": "eslint --fix src/. demo/. config/.; exit 0",
     "start": "webpack-dev-server --config config/webpack.dev.babel.js",
-    "build": "rm -rf lib && tsc && webpack --config config/webpack.prod.babel.js"
+    "build": "rm -rf lib && tsc && webpack --config config/webpack.prod.babel.js",
+    "prepublish": "npm run build"
   },
   "author": "Pawel Szczepkowski",
   "license": "MIT",
