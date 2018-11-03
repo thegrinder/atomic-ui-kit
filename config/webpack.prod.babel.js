@@ -3,7 +3,7 @@ const autoprefixer = require('autoprefixer');
 const PATHS = require('./paths');
 
 const extractSass = new ExtractTextPlugin({
-  filename: 'basic-styled-uikit.css',
+  filename: 'atomic-ui-kit.css',
   disable: process.env.NODE_ENV === 'development',
 });
 
@@ -16,7 +16,7 @@ const prodConfig = {
     path: PATHS.build,
     filename: 'index.js',
     publicPath: '/',
-    library: 'basicStyledUiKit',
+    library: 'AtomicUiKit',
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
