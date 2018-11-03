@@ -2,15 +2,15 @@ import { rem } from '../../helpers/utils';
 
 const headingTheme = {
   colours: {
-    white: '#fff',
-    lightest: '#ccc',
-    light: '#999',
-    normal: '#666',
+    danger: '#f0506e',
     dark: '#424242',
+    light: '#999',
+    lightest: '#ccc',
+    normal: '#666',
     primary: '#1e87f0',
     success: '#32d296',
     warning: '#faa05a',
-    danger: '#f0506e',
+    white: '#fff',
   },
   sizings: {
     h1: rem(96),

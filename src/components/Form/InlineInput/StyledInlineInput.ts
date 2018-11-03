@@ -1,12 +1,12 @@
 import { HTMLProps } from 'react';
 import styled from 'styled-components';
+import { rem } from '../../../helpers/utils';
 import {
-  inlineInputNormalStyle,
-  inlineInputHoverStyle,
   inlineInputActiveStyle,
   inlineInputDisabledStyle,
+  inlineInputHoverStyle,
+  inlineInputNormalStyle,
 } from '../formHelpers';
-import { rem } from '../../../helpers/utils';
 
 export interface IStyledInlineInputProps {
   invalid?: boolean;

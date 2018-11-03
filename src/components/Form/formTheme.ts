@@ -1,14 +1,14 @@
 const formTheme = {
-  // text input, textarea, and select styles
-  regular: {
+  // inputs for inline editing
+  inline: {
+    invalid: {
+      backgroundColor: 'transparent',
+      borderColor: '#f0506e',
+      color: '#f0506e',
+    },
     valid: {
-      normal: {
-        backgroundColor: '#fff',
-        borderColor: '#e5e5e5',
-        color: '#666',
-      },
       active: {
-        backgroundColor: '#fff',
+        backgroundColor: 'transparent',
         borderColor: '#1e87f0',
         color: '#666',
       },
@@ -16,29 +16,54 @@ const formTheme = {
         backgroundColor: '#f8f8f8',
         borderColor: '#e5e5e5',
         color: '#999',
-      },
-    },
-    invalid: {
-      backgroundColor: '#fff',
-      color: '#f0506e',
-      borderColor: '#f0506e',
-    },
-  },
-  // inputs for inline editing
-  inline: {
-    valid: {
-      normal: {
-        backgroundColor: 'transparent',
-        borderColor: 'transparent',
-        color: '#666',
       },
       hover: {
         backgroundColor: 'transparent',
         borderColor: '#e5e5e5',
         color: '#666',
       },
+      normal: {
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+        color: '#666',
+      },
+    },
+  },
+  // radio and checkbox styles
+  misc: {
+    invalid: {
+      backgroundColor: 'transparent',
+      borderColor: '#f0506e',
+    },
+    valid: {
       active: {
         backgroundColor: 'transparent',
+        borderColor: '#1e87f0',
+      },
+      checked: {
+        backgroundColor: '#1e87f0',
+        borderColor: 'transparent',
+      },
+      disabled: {
+        backgroundColor: '#f8f8f8',
+        bordeColor: '#e5e5e5',
+      },
+      normal: {
+        backgroundColor: 'transparent',
+        borderColor: '#ccc',
+      },
+    },
+  },
+  // text input, textarea, and select styles
+  regular: {
+    invalid: {
+      backgroundColor: '#fff',
+      borderColor: '#f0506e',
+      color: '#f0506e',
+    },
+    valid: {
+      active: {
+        backgroundColor: '#fff',
         borderColor: '#1e87f0',
         color: '#666',
       },
@@ -47,44 +72,19 @@ const formTheme = {
         borderColor: '#e5e5e5',
         color: '#999',
       },
-    },
-    invalid: {
-      backgroundColor: 'transparent',
-      color: '#f0506e',
-      borderColor: '#f0506e',
-    },
-  },
-  // radio and checkbox styles
-  misc: {
-    valid: {
       normal: {
-        borderColor: '#ccc',
-        backgroundColor: 'transparent',
+        backgroundColor: '#fff',
+        borderColor: '#e5e5e5',
+        color: '#666',
       },
-      active: {
-        borderColor: '#1e87f0',
-        backgroundColor: 'transparent',
-      },
-      checked: {
-        borderColor: 'transparent',
-        backgroundColor: '#1e87f0',
-      },
-      disabled: {
-        bordeColor: '#e5e5e5',
-        backgroundColor: '#f8f8f8',
-      },
-    },
-    invalid: {
-      borderColor: '#f0506e',
-      backgroundColor: 'transparent',
     },
   },
   toggle: {
-    normal: {
-      backgroundColor: '#ccc',
-    },
     checked: {
       backgroundColor: '#1e87f0',
+    },
+    normal: {
+      backgroundColor: '#ccc',
     },
   },
 };

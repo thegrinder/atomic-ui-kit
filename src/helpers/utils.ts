@@ -11,7 +11,7 @@ const createStyles = selectedStyles => (
   }`
 );
 
-export const getStyle = (selector, state = '') => (props) => {
+export const getStyle = (selector, state = '') => props => {
   const selectedStyles = state ? selector(props, state) : selector(props);
   return createStyles(selectedStyles);
 };

@@ -1,9 +1,9 @@
 import { HTMLProps, ReactNode } from 'react';
 import styled from 'styled-components';
 import {
-  btnNormalStyle,
-  btnHoverStyle,
   btnActiveStyle,
+  btnHoverStyle,
+  btnNormalStyle,
   btnSizeStyle,
 } from './buttonHelpers';
 

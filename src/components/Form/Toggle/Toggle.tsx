@@ -1,6 +1,6 @@
 import * as React from 'react';
-import ToggleLabel from './ToggleLabel';
 import ToggleCheckbox from './ToggleCheckbox';
+import ToggleLabel from './ToggleLabel';
 import ToggleSlider from './ToggleSlider';
 
 export interface IToggleProps {
@@ -22,8 +22,8 @@ const Toggle: React.SFC<IToggleProps> = ({ h, disabled, onChange, ...rest }) => 
 );
 
 const defaultProps: Partial<IToggleProps> = {
-  h: 34,
   disabled: false,
+  h: 34,
 };
 
 Toggle.defaultProps = defaultProps;

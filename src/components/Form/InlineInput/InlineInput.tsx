@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import StyledInlineInput from './StyledInlineInput';
-import Spinner from '../../Spinner/Spinner';
 import { rem } from '../../../helpers/utils';
+import Spinner from '../../Spinner/Spinner';
+import StyledInlineInput from './StyledInlineInput';
 
 export interface IInlineInputProps {
   submitting?: boolean;
@@ -37,9 +37,9 @@ const InlineInput: React.SFC<IInlineInputProps & React.HTMLProps<HTMLInputElemen
 );
 
 const defaultProps: Partial<IInlineInputProps> = {
-  submitting: false,
   disabled: false,
   invalid: false,
+  submitting: false,
 };
 
 InlineInput.defaultProps = defaultProps;

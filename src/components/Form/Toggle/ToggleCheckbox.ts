@@ -1,7 +1,7 @@
 import { HTMLProps } from 'react';
 import styled from 'styled-components';
-import { toggleNormalStyle, toggleCheckedStyle } from '../formHelpers';
 import { rem } from '../../../helpers/utils';
+import { toggleCheckedStyle, toggleNormalStyle } from '../formHelpers';
 
 export interface IToggleCheckboxProps {
   h: number;

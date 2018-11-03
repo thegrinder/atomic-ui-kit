@@ -1,7 +1,7 @@
 import { HTMLProps } from 'react';
 import styled from 'styled-components';
-import { commonInputStyles } from '../commonFormStyles';
 import { rem } from '../../../helpers/utils';
+import { commonInputStyles } from '../commonFormStyles';
 
 export interface IInputProps {
   invalid?: boolean;

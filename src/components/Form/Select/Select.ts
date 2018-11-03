@@ -1,8 +1,8 @@
 import { HTMLProps } from 'react';
 import styled from 'styled-components';
+import { rem } from '../../../helpers/utils';
 import { commonInputStyles } from '../commonFormStyles';
 import { inputDisabledStyle } from '../formHelpers';
-import { rem } from '../../../helpers/utils';
 
 export interface ISelectProps {
   invalid?: boolean;

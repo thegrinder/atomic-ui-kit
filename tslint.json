@@ -1,7 +1,12 @@
 {
   "extends": [
-    "tslint:latest",
     "tslint-react",
-    "tslint-config-prettier"
-  ]
+    "tslint:latest"
+  ],
+  "rules": {
+    "trailing-comma": true,
+    "no-submodule-imports": false,
+    "quotemark": [true, "single", "jsx-double"],
+    "arrow-parens": [true, "ban-single-arg-parens"]
+  }
 }

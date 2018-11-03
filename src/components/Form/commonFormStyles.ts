@@ -1,10 +1,10 @@
 import { css } from 'styled-components';
-import {
-  miscNormalStyle, miscActiveStyle, miscCheckedStyle,
-  miscDisabledStyle, inputNormalStyle, inputActiveStyle,
-  inputDisabledStyle,
-} from './formHelpers';
 import { rem } from '../../helpers/utils';
+import {
+  inputActiveStyle, inputDisabledStyle, inputNormalStyle,
+  miscActiveStyle, miscCheckedStyle, miscDisabledStyle,
+  miscNormalStyle,
+} from './formHelpers';
 
 export const commonInputStyles = css`
   margin: 0;

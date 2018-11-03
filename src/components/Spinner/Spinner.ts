@@ -24,8 +24,8 @@ const Spinner = styled.span<HTMLProps<ISpinnerProps & HTMLSpanElement>>`
 `;
 
 const defaultProps: Partial<ISpinnerProps> = {
-  size: 20,
   color: '#fff',
+  size: 20,
 };
 
 Spinner.defaultProps = defaultProps;

@@ -1,6 +1,6 @@
 import { HTMLProps } from 'react';
 import styled from 'styled-components';
-import { linkNormalStyle, linkHoverStyle } from './linkHelpers';
+import { linkHoverStyle, linkNormalStyle } from './linkHelpers';
 
 export type ILinkType = 'default' | 'muted';
 

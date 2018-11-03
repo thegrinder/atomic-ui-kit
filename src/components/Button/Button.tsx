@@ -1,5 +1,5 @@
 import * as React from 'react';
-import StyledButton, { IBtnType, IBtnSize } from './StyledButton';
+import StyledButton, { IBtnSize, IBtnType } from './StyledButton';
 
 export interface IButtonProps {
   btnType?: IBtnType;
@@ -7,7 +7,6 @@ export interface IButtonProps {
   left?: React.ReactNode;
   right?: React.ReactNode;
 }
-
 
 const Button: React.SFC<IButtonProps> = (
   { left, right, btnType, btnSize, children, ...rest }
@@ -26,8 +25,8 @@ const Button: React.SFC<IButtonProps> = (
 );
 
 const defaultProps: Partial<IButtonProps> = {
-  btnType: 'default',
   btnSize: 'default',
+  btnType: 'default',
   left: null,
   right: null,
 };

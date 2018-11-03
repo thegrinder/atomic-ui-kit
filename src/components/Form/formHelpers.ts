@@ -12,7 +12,6 @@ export const inputNormalStyle = getRegularInputStyle('normal');
 export const inputActiveStyle = getRegularInputStyle('active');
 export const inputDisabledStyle = getRegularInputStyle('disabled');
 
-
 const getMiscInput = ({ theme, invalid }, state) => {
   const { misc } = theme.uiKit.form;
   return invalid
@@ -27,7 +26,6 @@ export const miscActiveStyle = getMiscInputStyle('active');
 export const miscCheckedStyle = getMiscInputStyle('checked');
 export const miscDisabledStyle = getMiscInputStyle('disabled');
 
-
 const getInlineInput = ({ theme, invalid }, state) => {
   const { inline } = theme.uiKit.form;
   return invalid
@@ -41,7 +39,6 @@ export const inlineInputNormalStyle = getInlineInputStyle('normal');
 export const inlineInputHoverStyle = getInlineInputStyle('hover');
 export const inlineInputActiveStyle = getInlineInputStyle('active');
 export const inlineInputDisabledStyle = getInlineInputStyle('disabled');
-
 
 const getToggle = ({ theme }, state) => theme.uiKit.form.toggle[state];
 const getToggleStyle = state => getStyle(getToggle, state);

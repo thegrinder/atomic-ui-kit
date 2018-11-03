@@ -1,6 +1,6 @@
 import { HTMLProps } from 'react';
 import styled from 'styled-components';
-import { textSizingStyle, textColorStyle } from '../textHelpers';
+import { textColorStyle, textSizingStyle } from '../textHelpers';
 
 export type IParagraphColour =
   | 'white'
