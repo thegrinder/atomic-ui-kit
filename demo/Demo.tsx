@@ -1,14 +1,35 @@
-import styled from 'styled-components';
+/* tslint:disable */ 
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { FaAmazonPay } from 'react-icons/fa';
+import styled, { ThemeProvider } from 'styled-components';
 import {
-  Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle,
-  Select, Textarea, Radio, Checkbox, InlineInput,
-  Span, H1, H2, H3, H4, H5, H6, ColorBox, List, ListItem, theme,
+  Button,
+  Checkbox,
+  ColorBox,
   getBoxBgColor,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  InlineInput,
+  Input,
+  Link,
+  List,
+  ListItem,
+  Paragraph,
+  PlainButton,
+  Radio,
+  Select,
+  Span,
+  Spinner,
+  Textarea,
+  theme as atomicUiKitTheme,
+  Toggle,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
+import { render } from 'react-dom';
 
 const IconWrapper = styled.span`
   vertical-align: middle;
@@ -16,7 +37,7 @@ const IconWrapper = styled.span`
   display: inline-block;
   margin: 0 15px;
 `;
-  
+
 const Circle = styled.span`
   display: inline-block;
   width: 10px;
@@ -26,14 +47,19 @@ const Circle = styled.span`
   background-color: ${({ theme }) => getBoxBgColor(theme, 'primary')};
 `;
 
+const handleChange = e => alert(e.target.checked);
 
 class App extends React.Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={atomicUiKitTheme}>
         <div className="pa4">
           <div className="pa4">
-            <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
+            <ColorBox
+              bgColor="lightPrimary"
+              borderColor="primary"
+              className="pa4"
+            />
           </div>
           <div className="mb4">
             <H1 sizing="h1">Heading</H1>
@@ -64,17 +90,24 @@ class App extends React.Component {
             <Button btnType="danger">Danger</Button>
           </div>
           <div className="mb4">
-            <Button btnType="default" btnSize="small">Small</Button>
-            <Button btnType="primary" btnSize="default">Default</Button>
-            <Button btnType="secondary" btnSize="large">Large</Button>
-          </div>
-          <div className="mb4">
-            <Button left={<Circle />}>
-              Icon Button
+            <Button btnType="default" btnSize="small">
+              Small
+            </Button>
+            <Button btnType="primary" btnSize="default">
+              Default
+            </Button>
+            <Button btnType="secondary" btnSize="large">
+              Large
             </Button>
           </div>
           <div className="mb4">
-            <Button btnType="primary" right={<IconWrapper><FaAmazonPay size={24} /></IconWrapper>}>
+            <Button left={<Circle />}>Icon Button</Button>
+          </div>
+          <div className="mb4">
+            <Button
+              btnType="primary"
+              right={<IconWrapper><FaAmazonPay size={24} /></IconWrapper>}
+            >
               Icon Button
             </Button>
           </div>
@@ -125,18 +158,18 @@ class App extends React.Component {
             </Select>
           </div>
           <div className="w-50 mb4">
-            <Textarea rows={5}/>
+            <Textarea rows={5} />
           </div>
           <div className="w-50 mb4">
             <Radio />
             <Radio />
           </div>
           <div className="w-50 mb4">
-            <Checkbox id="bla"/>
+            <Checkbox id="bla" />
             <Checkbox />
           </div>
           <div>
-            <Toggle onChange={(e) => { console.log(e.target.checked); }}/>
+            <Toggle onChange={handleChange} />
           </div>
         </div>
       </ThemeProvider>
