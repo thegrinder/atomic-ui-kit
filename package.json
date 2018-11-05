@@ -1,6 +1,6 @@
 {
   "name": "atomic-ui-kit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A set of basic UI components built with styled-components",
   "keywords": [
     "react",
