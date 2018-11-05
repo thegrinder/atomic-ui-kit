@@ -1,10 +1,10 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const autoprefixer = require('autoprefixer');
 const PATHS = require('./paths');
 
-const extractSass = new ExtractTextPlugin({
-  filename: 'atomic-ui-kit.css',
-  disable: process.env.NODE_ENV === 'development',
+const extractSass = new MiniCssExtractPlugin({
+  filename: 'atomic-ui-kit.min.css',
 });
 
 const prodConfig = {
@@ -33,24 +33,25 @@ const prodConfig = {
       },
       {
         test: /\.s?css$/,
-        use: extractSass.extract({
-          use: [
-            { loader: 'css-loader' },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: () => [autoprefixer()],
-              },
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [autoprefixer()],
             },
-            { loader: 'sass-loader' },
-          ],
-          fallback: 'style-loader',
-        }),
+          },
+          'sass-loader',
+        ],
       },
     ],
   },
   plugins: [extractSass],
+  optimization: {
+    minimizer: [new OptimizeCSSAssetsPlugin({})]
+  },
   externals: [
     'react',
     'react-dom',
