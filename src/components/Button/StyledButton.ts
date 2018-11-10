@@ -7,17 +7,17 @@ import {
   btnSizeStyle,
 } from './buttonHelpers';
 
-export type IBtnType = 'default' | 'primary' | 'secondary' | 'danger';
-export type IBtnSize = 'small' | 'default' | 'large';
+export type IStyledButtonType = 'default' | 'primary' | 'secondary' | 'danger';
+export type IStyledButtonSize = 'small' | 'default' | 'large';
 
-export interface IButtonProps {
-  btnType: IBtnType;
-  btnSize: IBtnSize;
+export interface IStyledButtonProps {
+  btnType: IStyledButtonType;
+  btnSize: IStyledButtonSize;
   left: ReactNode;
   right: ReactNode;
 }
 
-const StyledButton = styled.button<IButtonProps & HTMLProps<HTMLButtonElement>>`
+export const StyledButton = styled.button<IStyledButtonProps & HTMLProps<HTMLButtonElement>>`
   margin: 0;
   border: none;
   overflow: visible;

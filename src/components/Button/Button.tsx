@@ -1,14 +1,17 @@
 import * as React from 'react';
-import StyledButton, { IBtnSize, IBtnType } from './StyledButton';
+import StyledButton, { IStyledButtonSize, IStyledButtonType } from './StyledButton';
+
+export type IButtonType = IStyledButtonType;
+export type IButtonSize = IStyledButtonSize;
 
 export interface IButtonProps {
-  btnType?: IBtnType;
-  btnSize?: IBtnSize;
+  btnType?: IButtonType;
+  btnSize?: IButtonSize;
   left?: React.ReactNode;
   right?: React.ReactNode;
 }
 
-const Button: React.ComponentType<React.HTMLProps<HTMLButtonElement> & IButtonProps> = React.forwardRef((
+export const Button: React.ComponentType<React.HTMLProps<HTMLButtonElement> & IButtonProps> = React.forwardRef((
   { left, right, btnType, btnSize, children, ref, ...rest }, innerRef: any
 ) => (
   <StyledButton
@@ -33,5 +36,3 @@ const defaultProps: Partial<IButtonProps> = {
 };
 
 Button.defaultProps = defaultProps;
-
-export default Button;
