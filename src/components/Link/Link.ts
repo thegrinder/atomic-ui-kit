@@ -8,7 +8,7 @@ export interface ILinkProps {
   linkType?: ILinkType;
 }
 
-const Link = styled.a<ILinkProps & HTMLProps<HTMLAnchorElement>>`
+export const Link = styled.a<ILinkProps & HTMLProps<HTMLAnchorElement>>`
   cursor: pointer;
   touch-action: manipulation;
   text-decoration: none;
@@ -26,5 +26,3 @@ const defaultProps: Partial<ILinkProps> = {
 };
 
 Link.defaultProps = defaultProps;
-
-export default Link;

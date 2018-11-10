@@ -7,7 +7,7 @@ export interface IInputProps {
   invalid?: boolean;
 }
 
-const Input = styled.input<IInputProps & HTMLProps<HTMLInputElement>>`
+export const Input = styled.input<IInputProps & HTMLProps<HTMLInputElement>>`
   ${commonInputStyles}
   vertical-align: middle;
   display: inline-block;
@@ -21,5 +21,3 @@ const defaultProps: Partial<IInputProps> = {
 };
 
 Input.defaultProps = defaultProps;
-
-export default Input;

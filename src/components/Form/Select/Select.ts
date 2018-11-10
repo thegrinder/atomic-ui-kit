@@ -8,7 +8,7 @@ export interface ISelectProps {
   invalid?: boolean;
 }
 
-const Select = styled.select<ISelectProps & HTMLProps<HTMLSelectElement>>`
+export const Select = styled.select<ISelectProps & HTMLProps<HTMLSelectElement>>`
   ${commonInputStyles}
   text-transform: none;
   padding: 0 ${rem(10)};
@@ -26,5 +26,3 @@ const defaultProps: Partial<ISelectProps> = {
 };
 
 Select.defaultProps = defaultProps;
-
-export default Select;

@@ -5,7 +5,7 @@ import heading from '../components/Headings/headingTheme';
 import link from '../components/Link/linkTheme';
 import text from '../components/Text/textTheme';
 
-const theme = {
+export const theme = {
   uiKit: {
     button,
     colorBox,
@@ -15,5 +15,3 @@ const theme = {
     text,
   },
 };
-
-export default theme;

@@ -7,7 +7,7 @@ export interface ITextareaProps {
   invalid?: boolean;
 }
 
-const Textarea = styled.textarea<ITextareaProps & HTMLProps<HTMLTextAreaElement>>`
+export const Textarea = styled.textarea<ITextareaProps & HTMLProps<HTMLTextAreaElement>>`
   ${commonInputStyles}
   padding: ${rem(4)} ${rem(10)};
   vertical-align: top;
@@ -19,5 +19,3 @@ const defaultProps: Partial<ITextareaProps> = {
 };
 
 Textarea.defaultProps = defaultProps;
-
-export default Textarea;

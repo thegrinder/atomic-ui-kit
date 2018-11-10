@@ -6,7 +6,7 @@ export interface ICheckboxProps {
   invalid?: boolean;
 }
 
-const Checkbox = styled.input.attrs({
+export const Checkbox = styled.input.attrs({
   type: 'checkbox',
 })<ICheckboxProps & HTMLProps<HTMLInputElement>>`
   ${miscInputStyles}
@@ -32,5 +32,3 @@ const defaultProps: Partial<ICheckboxProps> = {
 };
 
 Checkbox.defaultProps = defaultProps;
-
-export default Checkbox;

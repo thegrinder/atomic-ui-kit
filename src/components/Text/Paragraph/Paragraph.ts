@@ -23,7 +23,7 @@ export interface IParagraphProps {
   sizing?: IParagraphSizing;
 }
 
-const Paragraph = styled.p<IParagraphProps & HTMLProps<HTMLParagraphElement>>`
+export const Paragraph = styled.p<IParagraphProps & HTMLProps<HTMLParagraphElement>>`
   display: block;
   margin: 0;
   padding: 0;
@@ -37,5 +37,3 @@ const defaultProps: Partial<IParagraphProps> = {
 };
 
 Paragraph.defaultProps = defaultProps;
-
-export default Paragraph;

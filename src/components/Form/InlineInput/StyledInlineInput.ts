@@ -13,7 +13,7 @@ export interface IStyledInlineInputProps {
   submitting?: boolean;
 }
 
-const StyledInlineInput = styled.input<IStyledInlineInputProps & HTMLProps<HTMLInputElement>>`
+export const StyledInlineInput = styled.input<IStyledInlineInputProps & HTMLProps<HTMLInputElement>>`
   margin: 0;
   border-radius: 0;
   -webkit-appearance: none;

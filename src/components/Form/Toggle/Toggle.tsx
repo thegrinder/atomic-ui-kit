@@ -9,7 +9,7 @@ export interface IToggleProps {
   onChange: (e: any) => void;
 }
 
-const Toggle: React.SFC<IToggleProps> = ({ h, disabled, onChange, ...rest }) => (
+export const Toggle: React.SFC<IToggleProps> = ({ h, disabled, onChange, ...rest }) => (
   <ToggleLabel>
     <ToggleCheckbox
       h={h}
@@ -27,5 +27,3 @@ const defaultProps: Partial<IToggleProps> = {
 };
 
 Toggle.defaultProps = defaultProps;
-
-export default Toggle;

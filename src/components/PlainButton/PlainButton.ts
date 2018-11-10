@@ -6,7 +6,7 @@ export interface IPlainButtonProps {
   btnHoverColor?: string;
 }
 
-const PlainButton = styled.button<IPlainButtonProps & HTMLProps<HTMLButtonElement>>`
+export const PlainButton = styled.button<IPlainButtonProps & HTMLProps<HTMLButtonElement>>`
   touch-action: manipulation;
   margin: 0;
   border: none;
@@ -38,5 +38,3 @@ const defaultProps: Partial<IPlainButtonProps> = {
 };
 
 PlainButton.defaultProps = defaultProps;
-
-export default PlainButton;

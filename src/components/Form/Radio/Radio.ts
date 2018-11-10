@@ -6,7 +6,7 @@ export interface IRadioProps {
   invalid?: boolean;
 }
 
-const Radio = styled.input.attrs({
+export const Radio = styled.input.attrs({
   type: 'radio',
 })<IRadioProps & HTMLProps<HTMLInputElement>>`
   ${miscInputStyles}
@@ -32,5 +32,3 @@ const defaultProps: Partial<IRadioProps> = {
 };
 
 Radio.defaultProps = defaultProps;
-
-export default Radio;

@@ -30,7 +30,7 @@ export interface IColorBoxProps {
   borderColor?: IBoxBorderColor;
 }
 
-const ColorBox = styled.div<IColorBoxProps & HTMLProps<HTMLDivElement>>`
+export const ColorBox = styled.div<IColorBoxProps & HTMLProps<HTMLDivElement>>`
   ${colorBoxBgStyle}
   ${colorBoxBorderStyle}
 `;
@@ -41,5 +41,3 @@ const defaultProps: Partial<IColorBoxProps> = {
 };
 
 ColorBox.defaultProps = defaultProps;
-
-export default ColorBox;

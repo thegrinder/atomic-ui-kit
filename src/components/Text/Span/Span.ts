@@ -1,5 +1,3 @@
-import Paragraph from '../Paragraph/Paragraph';
+import { Paragraph } from '../Paragraph/Paragraph';
 
-const Span = Paragraph.withComponent('span');
-
-export default Span;
+export const Span = Paragraph.withComponent('span');

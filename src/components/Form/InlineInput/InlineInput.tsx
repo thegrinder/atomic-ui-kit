@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { rem } from '../../../helpers/utils';
-import Spinner from '../../Spinner/Spinner';
+import { Spinner } from '../../Spinner/Spinner';
 import StyledInlineInput from './StyledInlineInput';
 
 export interface IInlineInputProps {
@@ -23,7 +23,7 @@ const SpinnerWrapper = styled.div`
   align-items: center;
 `;
 
-const InlineInput: React.SFC<IInlineInputProps & React.HTMLProps<HTMLInputElement>> = (
+export const InlineInput: React.SFC<IInlineInputProps & React.HTMLProps<HTMLInputElement>> = (
   { submitting, disabled, ref, ...rest }
 ) => (
   <Wrapper>
@@ -43,5 +43,3 @@ const defaultProps: Partial<IInlineInputProps> = {
 };
 
 InlineInput.defaultProps = defaultProps;
-
-export default InlineInput;

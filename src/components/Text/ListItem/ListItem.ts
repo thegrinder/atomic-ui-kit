@@ -1,5 +1,3 @@
-import Paragraph from '../Paragraph/Paragraph';
+import { Paragraph } from '../Paragraph/Paragraph';
 
-const ListItem = Paragraph.withComponent('li');
-
-export default ListItem;
+export const ListItem = Paragraph.withComponent('li');

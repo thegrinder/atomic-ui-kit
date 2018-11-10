@@ -12,7 +12,7 @@ const loading = keyframes`
   100% { transform: rotate(360deg); }
 `;
 
-const Spinner = styled.span<HTMLProps<ISpinnerProps & HTMLSpanElement>>`
+export const Spinner = styled.span<HTMLProps<ISpinnerProps & HTMLSpanElement>>`
   width: ${props => rem(props.size)};
   height: ${props => rem(props.size)};
   border-radius: 100%;
@@ -29,5 +29,3 @@ const defaultProps: Partial<ISpinnerProps> = {
 };
 
 Spinner.defaultProps = defaultProps;
-
-export default Spinner;
