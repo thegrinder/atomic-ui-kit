@@ -16,7 +16,7 @@ const Button: React.ComponentType<React.HTMLProps<HTMLButtonElement> & IButtonPr
     right={right}
     btnSize={btnSize}
     btnType={btnType}
-    innerRef={innerRef}
+    ref={innerRef}
     {...rest}
   >
     {left && left}
