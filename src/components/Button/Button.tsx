@@ -8,21 +8,22 @@ export interface IButtonProps {
   right?: React.ReactNode;
 }
 
-const Button: React.SFC<IButtonProps> = (
-  { left, right, btnType, btnSize, children, ...rest }
+const Button: React.ComponentType<React.HTMLProps<HTMLButtonElement> & IButtonProps> = React.forwardRef((
+  { left, right, btnType, btnSize, children, ref, ...rest }, innerRef: any
 ) => (
   <StyledButton
     left={left}
     right={right}
     btnSize={btnSize}
     btnType={btnType}
+    innerRef={innerRef}
     {...rest}
   >
     {left && left}
     {children}
     {right && right}
   </StyledButton>
-);
+));
 
 const defaultProps: Partial<IButtonProps> = {
   btnSize: 'default',
