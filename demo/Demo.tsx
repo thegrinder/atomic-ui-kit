@@ -4,6 +4,7 @@ import { FaAmazonPay } from 'react-icons/fa';
 import styled, { ThemeProvider } from 'styled-components';
 import {
   Button,
+  Card,
   Checkbox,
   ColorBox,
   getBoxBgColor,
@@ -54,6 +55,9 @@ class App extends React.Component {
     return (
       <ThemeProvider theme={atomicUiKitTheme}>
         <div className="pa4">
+          <div className="mb4">
+            <Card>card</Card>
+          </div>
           <div className="pa4">
             <ColorBox
               bgColor="lightPrimary"
