@@ -18,12 +18,17 @@ export type IParagraphSizing =
   | 'medium'
   | 'large';
 
-export interface IParagraphProps {
+export interface ITextOwnProps {
   colour?: IParagraphColour;
   sizing?: IParagraphSizing;
 }
 
-export const Paragraph = styled.p<IParagraphProps & HTMLProps<HTMLParagraphElement>>`
+export type ITextProps = ITextOwnProps
+  & HTMLProps<HTMLParagraphElement>
+  & HTMLProps<HTMLSpanElement>
+  & HTMLProps<HTMLDataListElement>;
+
+export const Paragraph = styled.p<ITextProps>`
   display: block;
   margin: 0;
   padding: 0;
@@ -31,7 +36,7 @@ export const Paragraph = styled.p<IParagraphProps & HTMLProps<HTMLParagraphEleme
   ${textColorStyle}
 `;
 
-const defaultProps: Partial<IParagraphProps> = {
+const defaultProps: Partial<ITextProps> = {
   colour: 'normal',
   sizing: 'medium',
 };

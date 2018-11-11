@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import { rem } from '../../../helpers/utils';
 import { commonInputStyles } from '../commonFormStyles';
 
-export interface IInputProps {
+interface IInputOwnProps {
   invalid?: boolean;
 }
 
-export const Input = styled.input<IInputProps & HTMLProps<HTMLInputElement>>`
+export type IInputProps = IInputOwnProps & HTMLProps<HTMLInputElement>;
+
+export const Input = styled.input<IInputProps>`
   ${commonInputStyles}
   vertical-align: middle;
   display: inline-block;

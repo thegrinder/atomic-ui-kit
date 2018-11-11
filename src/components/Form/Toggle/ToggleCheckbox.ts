@@ -3,13 +3,15 @@ import styled from 'styled-components';
 import { rem } from '../../../helpers/utils';
 import { toggleCheckedStyle, toggleNormalStyle } from '../formHelpers';
 
-export interface IToggleCheckboxProps {
+interface IToggleCheckboxOwnProps {
   h: number;
 }
 
-const ToggleCheckbox = styled.input.attrs({
+type IToggleCheckboxProps = IToggleCheckboxOwnProps & HTMLProps<HTMLInputElement>;
+
+export const ToggleCheckbox = styled.input.attrs({
   type: 'checkbox',
-})<IToggleCheckboxProps & HTMLProps<HTMLInputElement>>`
+})<IToggleCheckboxProps>`
   display: none;
   & + span {
     ${toggleNormalStyle}
@@ -24,5 +26,3 @@ const ToggleCheckbox = styled.input.attrs({
     left: calc(100% - ${({ h }) => rem(h - 4)});
   }
 `;
-
-export default ToggleCheckbox;

@@ -10,14 +10,16 @@ import {
 export type IStyledButtonType = 'default' | 'primary' | 'secondary' | 'danger';
 export type IStyledButtonSize = 'small' | 'default' | 'large';
 
-export interface IStyledButtonProps {
+interface IStyledButtonOwnProps {
   btnType: IStyledButtonType;
   btnSize: IStyledButtonSize;
   left: ReactNode;
   right: ReactNode;
 }
 
-export const StyledButton = styled.button<IStyledButtonProps & HTMLProps<HTMLButtonElement>>`
+type IStyledButtonProps = HTMLProps<HTMLButtonElement> & IStyledButtonOwnProps;
+
+export const StyledButton = styled.button<IStyledButtonProps>`
   margin: 0;
   border: none;
   overflow: visible;
@@ -52,5 +54,3 @@ export const StyledButton = styled.button<IStyledButtonProps & HTMLProps<HTMLBut
     cursor: default;
   }
 `;
-
-export default StyledButton;

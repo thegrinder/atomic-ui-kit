@@ -2,13 +2,15 @@ import { HTMLProps } from 'react';
 import styled from 'styled-components';
 import { miscInputStyles } from '../commonFormStyles';
 
-export interface IRadioProps {
+interface IRadioOwnProps {
   invalid?: boolean;
 }
 
+export type IRadioProps = IRadioOwnProps & HTMLProps<HTMLInputElement>;
+
 export const Radio = styled.input.attrs({
   type: 'radio',
-})<IRadioProps & HTMLProps<HTMLInputElement>>`
+})<IRadioProps>`
   ${miscInputStyles}
   border-radius: 50%;
   position: relative;

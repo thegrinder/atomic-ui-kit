@@ -1,16 +1,17 @@
 import * as React from 'react';
 import { Spinner } from '../Spinner/Spinner';
-import ChildrenWrapper from './ChildrenWrapper';
-import SpinnerWrapper from './SpinnerWrapper';
-import StyledButton, {
+import { ChildrenWrapper } from './ChildrenWrapper';
+import { SpinnerWrapper } from './SpinnerWrapper';
+import {
   IStyledButtonSize,
-  IStyledButtonType
+  IStyledButtonType,
+  StyledButton,
 } from './StyledButton';
 
 export type IButtonType = IStyledButtonType;
 export type IButtonSize = IStyledButtonSize;
 
-export interface IButtonProps {
+interface IButtonOwnProps {
   btnType?: IButtonType;
   btnSize?: IButtonSize;
   left?: React.ReactNode;
@@ -18,9 +19,9 @@ export interface IButtonProps {
   submitting?: boolean;
 }
 
-export const Button: React.ComponentType<
-  React.HTMLProps<HTMLButtonElement> & IButtonProps
-> = React.forwardRef(
+export type IButtonProps = IButtonOwnProps & React.HTMLProps<HTMLButtonElement>;
+
+export const Button: React.ComponentType<IButtonProps> = React.forwardRef(
   (
     { left, right, btnType, btnSize, submitting, children, ref, ...rest },
     innerRef: any

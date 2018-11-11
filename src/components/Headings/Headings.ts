@@ -21,12 +21,14 @@ export type IHeadingColour =
   | 'warning'
   | 'danger';
 
-export interface IHeadingProps {
+interface IHeadingOwnProps {
   sizing?: IHeadingSizing;
   colour?: IHeadingColour;
 }
 
-export const H1 = styled.h1<IHeadingProps & HTMLProps<HTMLHeadingElement>>`
+export type IHeadingProps = IHeadingOwnProps & HTMLProps<HTMLHeadingElement>;
+
+export const H1 = styled.h1<IHeadingProps>`
   display: block;
   margin: 0;
   padding: 0;

@@ -2,13 +2,15 @@ import { HTMLProps } from 'react';
 import styled from 'styled-components';
 import { miscInputStyles } from '../commonFormStyles';
 
-export interface ICheckboxProps {
+interface ICheckboxOwnProps {
   invalid?: boolean;
 }
 
+export type ICheckboxProps = ICheckboxOwnProps & HTMLProps<HTMLInputElement>;
+
 export const Checkbox = styled.input.attrs({
   type: 'checkbox',
-})<ICheckboxProps & HTMLProps<HTMLInputElement>>`
+})<ICheckboxProps>`
   ${miscInputStyles}
   border-radius: 0;
   position: relative;

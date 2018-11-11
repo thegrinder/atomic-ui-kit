@@ -1,7 +1,7 @@
 import * as React from 'react';
-import ToggleCheckbox from './ToggleCheckbox';
-import ToggleLabel from './ToggleLabel';
-import ToggleSlider from './ToggleSlider';
+import { ToggleCheckbox } from './ToggleCheckbox';
+import { ToggleLabel } from './ToggleLabel';
+import { ToggleSlider } from './ToggleSlider';
 
 export interface IToggleProps {
   h?: number;

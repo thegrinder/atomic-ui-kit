@@ -4,11 +4,13 @@ import { linkHoverStyle, linkNormalStyle } from './linkHelpers';
 
 export type ILinkType = 'default' | 'muted';
 
-export interface ILinkProps {
+interface ILinkOwnProps {
   linkType?: ILinkType;
 }
 
-export const Link = styled.a<ILinkProps & HTMLProps<HTMLAnchorElement>>`
+export type ILinkProps = ILinkOwnProps & HTMLProps<HTMLAnchorElement>;
+
+export const Link = styled.a<ILinkProps>`
   cursor: pointer;
   touch-action: manipulation;
   text-decoration: none;

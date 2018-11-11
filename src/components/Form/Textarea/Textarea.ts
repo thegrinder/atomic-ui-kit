@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import { rem } from '../../../helpers/utils';
 import { commonInputStyles } from '../commonFormStyles';
 
-export interface ITextareaProps {
+interface ITextareaOwnProps {
   invalid?: boolean;
 }
 
-export const Textarea = styled.textarea<ITextareaProps & HTMLProps<HTMLTextAreaElement>>`
+export type ITextareaProps = ITextareaOwnProps & HTMLProps<HTMLTextAreaElement>;
+
+export const Textarea = styled.textarea<ITextareaProps>`
   ${commonInputStyles}
   padding: ${rem(4)} ${rem(10)};
   vertical-align: top;

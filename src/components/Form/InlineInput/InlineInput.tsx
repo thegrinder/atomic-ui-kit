@@ -2,28 +2,19 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { rem } from '../../../helpers/utils';
 import { Spinner } from '../../Spinner/Spinner';
-import StyledInlineInput from './StyledInlineInput';
+import { SpinnerWrapper } from './SpinnerWrapper';
+import { StyledInlineInput } from './StyledInlineInput';
+import { Wrapper } from './Wrapper';
 
-export interface IInlineInputProps {
+interface IInlineInputOwnProps {
   submitting?: boolean;
   disabled?: boolean;
   invalid?: boolean;
 }
 
-const Wrapper = styled.div`
-  position: relative;
-`;
+export type IInlineInputProps = IInlineInputOwnProps & React.HTMLProps<HTMLInputElement>;
 
-const SpinnerWrapper = styled.div`
-  position: absolute;
-  right: ${rem(8)};
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-`;
-
-export const InlineInput: React.SFC<IInlineInputProps & React.HTMLProps<HTMLInputElement>> = (
+export const InlineInput: React.SFC<IInlineInputProps> = (
   { submitting, disabled, ref, ...rest }
 ) => (
   <Wrapper>

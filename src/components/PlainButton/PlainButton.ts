@@ -1,12 +1,14 @@
 import { HTMLProps } from 'react';
 import styled from 'styled-components';
 
-export interface IPlainButtonProps {
+interface IPlainButtonOwnProps {
   btnColor?: string;
   btnHoverColor?: string;
 }
 
-export const PlainButton = styled.button<IPlainButtonProps & HTMLProps<HTMLButtonElement>>`
+export type IPlainButtonProps = IPlainButtonOwnProps & HTMLProps<HTMLButtonElement>;
+
+export const PlainButton = styled.button<IPlainButtonProps>`
   touch-action: manipulation;
   margin: 0;
   border: none;

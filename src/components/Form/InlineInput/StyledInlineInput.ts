@@ -8,12 +8,14 @@ import {
   inlineInputNormalStyle,
 } from '../formHelpers';
 
-export interface IStyledInlineInputProps {
+interface IStyledInlineInputOwnProps {
   invalid?: boolean;
   submitting?: boolean;
 }
 
-export const StyledInlineInput = styled.input<IStyledInlineInputProps & HTMLProps<HTMLInputElement>>`
+type IStyledInlineInputProps = IStyledInlineInputOwnProps & HTMLProps<HTMLInputElement>;
+
+export const StyledInlineInput = styled.input<IStyledInlineInputProps>`
   margin: 0;
   border-radius: 0;
   -webkit-appearance: none;
@@ -50,5 +52,3 @@ const defaultProps: Partial<IStyledInlineInputProps> = {
 };
 
 StyledInlineInput.defaultProps = defaultProps;
-
-export default StyledInlineInput;

@@ -2,12 +2,14 @@ import { HTMLProps } from 'react';
 import styled from 'styled-components';
 import { rem } from '../../../helpers/utils';
 
-export interface IToggleSliderProps {
+interface IToggleSliderOwnProps {
   disabled: boolean;
   h: number;
 }
 
-const ToggleSlider = styled.span<IToggleSliderProps & HTMLProps<HTMLSpanElement>>`
+type IToggleSliderProps = IToggleSliderOwnProps & HTMLProps<HTMLSpanElement>;
+
+export const ToggleSlider = styled.span<IToggleSliderProps>`
   position: relative;
   display: inline-block;
   width: 100%;
@@ -30,5 +32,3 @@ const ToggleSlider = styled.span<IToggleSliderProps & HTMLProps<HTMLSpanElement>
     border-radius: 100%;
   }
 `;
-
-export default ToggleSlider;

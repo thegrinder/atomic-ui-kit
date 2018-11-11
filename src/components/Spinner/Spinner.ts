@@ -2,17 +2,19 @@ import { HTMLProps } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { rem } from '../../helpers/utils';
 
-export interface ISpinnerProps {
+interface ISpinnerOwnProps {
   size?: number;
   color?: string;
 }
+
+export type ISpinnerProps = ISpinnerOwnProps & HTMLProps<HTMLSpanElement>;
 
 const loading = keyframes`
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 `;
 
-export const Spinner = styled.span<HTMLProps<ISpinnerProps & HTMLSpanElement>>`
+export const Spinner = styled.span<ISpinnerProps>`
   width: ${props => rem(props.size)};
   height: ${props => rem(props.size)};
   border-radius: 100%;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-const SpinnerWrapper = styled.span<React.HTMLFactory<HTMLSpanElement>>`
+export const SpinnerWrapper = styled.span<React.HTMLProps<HTMLSpanElement>>`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -9,5 +9,3 @@ const SpinnerWrapper = styled.span<React.HTMLFactory<HTMLSpanElement>>`
   right: 0;
   margin: auto;
 `;
-
-export default SpinnerWrapper;

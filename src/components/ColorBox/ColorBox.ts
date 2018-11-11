@@ -25,12 +25,14 @@ export type IBoxBorderColor =
   | 'warning'
   | 'danger';
 
-export interface IColorBoxProps {
+interface IColorBoxOwnProps {
   bgColor?: IBoxBgColor;
   borderColor?: IBoxBorderColor;
 }
 
-export const ColorBox = styled.div<IColorBoxProps & HTMLProps<HTMLDivElement>>`
+export type IColorBoxProps = HTMLProps<HTMLDivElement> & IColorBoxOwnProps;
+
+export const ColorBox = styled.div<IColorBoxProps>`
   ${colorBoxBgStyle}
   ${colorBoxBorderStyle}
 `;

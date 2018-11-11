@@ -4,11 +4,13 @@ import { rem } from '../../../helpers/utils';
 import { commonInputStyles } from '../commonFormStyles';
 import { inputDisabledStyle } from '../formHelpers';
 
-export interface ISelectProps {
+interface ISelectOwnProps {
   invalid?: boolean;
 }
 
-export const Select = styled.select<ISelectProps & HTMLProps<HTMLSelectElement>>`
+export type ISelectProps = ISelectOwnProps & HTMLProps<HTMLSelectElement>;
+
+export const Select = styled.select<ISelectProps>`
   ${commonInputStyles}
   text-transform: none;
   padding: 0 ${rem(10)};
