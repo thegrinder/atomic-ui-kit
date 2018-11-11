@@ -21,6 +21,7 @@ export const StyledButton = styled.button<IStyledButtonProps & HTMLProps<HTMLBut
   margin: 0;
   border: none;
   overflow: visible;
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   text-align: center;

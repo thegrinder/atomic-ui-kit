@@ -88,6 +88,7 @@ class App extends React.Component {
             <Button btnType="primary">Primary</Button>
             <Button btnType="secondary">Secondary</Button>
             <Button btnType="danger">Danger</Button>
+            <Button submitting={true} btnType="primary">submitting</Button>
           </div>
           <div className="mb4">
             <Button btnType="default" btnSize="small">
