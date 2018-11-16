@@ -1,4 +1,4 @@
-import { HTMLProps } from 'react';
+import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 import styled from 'styled-components';
 import { linkHoverStyle, linkNormalStyle } from './linkHelpers';
 
@@ -8,9 +8,9 @@ interface ILinkOwnProps {
   linkType?: ILinkType;
 }
 
-export type ILinkProps = ILinkOwnProps & HTMLProps<HTMLAnchorElement>;
+export type ILinkProps = ILinkOwnProps & RouterLinkProps;
 
-export const Link = styled.a<ILinkProps>`
+export const Link = styled(RouterLink)<ILinkProps>`
   cursor: pointer;
   touch-action: manipulation;
   text-decoration: none;
