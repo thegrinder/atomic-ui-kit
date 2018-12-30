@@ -1,8 +1,9 @@
-/* tslint:disable */ 
+/* tslint:disable */
 import * as React from 'react';
 import { FaAmazonPay } from 'react-icons/fa';
 import { HashRouter, Route } from 'react-router-dom';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { render } from 'react-dom';
 import {
   Button,
   Card,
@@ -29,9 +30,26 @@ import {
   Textarea,
   theme as atomicUiKitTheme,
   Toggle,
+  InfiniteProgressBar,
 } from '../src/index';
-import '../src/tachyons/tachyons.scss';
-import { render } from 'react-dom';
+
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  input, textarea, select {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
+`;
 
 const IconWrapper = styled.span`
   vertical-align: middle;
@@ -57,8 +75,12 @@ class App extends React.Component {
       <HashRouter>
         <ThemeProvider theme={atomicUiKitTheme}>
           <div className="pa4">
+            <GlobalStyles />
             <div className="mb4">
               <Card>card</Card>
+            </div>
+            <div className="mb4">
+              <InfiniteProgressBar />
             </div>
             <div className="pa4">
               <ColorBox

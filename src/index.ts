@@ -19,6 +19,7 @@ export * from './components/Text/Span/Span';
 export * from './components/Text/ListItem/ListItem';
 export * from './components/ColorBox/ColorBox';
 export * from './components/Card/Card';
+export * from './components/InfiniteProgressBar/InfiniteProgressBar';
 
 export * from './theme/theme';
 export * from './theme/themeSelectors';
